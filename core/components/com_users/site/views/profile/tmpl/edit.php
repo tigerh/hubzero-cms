@@ -12,6 +12,7 @@ defined('_HZEXEC_') or die();
 Html::behavior('keepalive');
 Html::behavior('tooltip');
 Html::behavior('formvalidation');
+
 //load user_profile plugin language
 $lang = Lang::getRoot();
 $lang->load('plg_user_profile', PATH_APP) ||

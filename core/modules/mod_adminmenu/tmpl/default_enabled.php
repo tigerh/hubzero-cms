@@ -218,12 +218,12 @@ if (User::authorise('core.manage', 'com_menus'))
 	$createMenu = $shownew && User::authorise('core.create', 'com_menus');
 
 	$menu->addChild(
-		new Node(Lang::txt('MOD_MENU_MENU_MANAGER'), 'index.php?option=com_menus&view=menus', 'class:menumgr'), $createMenu
+		new Node(Lang::txt('MOD_MENU_MENU_MANAGER'), 'index.php?option=com_menus&controller=menus', 'class:menumgr'), $createMenu
 	);
 	if ($createMenu)
 	{
 		$menu->addChild(
-			new Node(Lang::txt('MOD_MENU_MENU_MANAGER_NEW_MENU'), 'index.php?option=com_menus&view=menu&layout=edit', 'class:newarticle')
+			new Node(Lang::txt('MOD_MENU_MENU_MANAGER_NEW_MENU'), 'index.php?option=com_menus&controller=menu&layout=edit', 'class:newarticle')
 		);
 		$menu->getParent();
 	}
@@ -250,13 +250,13 @@ if (User::authorise('core.manage', 'com_menus'))
 			$titleicon = ' <span title="' . $menuType->title_native . '">' . $alt . '</span>';
 		}
 		$menu->addChild(
-			new Node($menuType->title, 'index.php?option=com_menus&view=items&menutype=' . $menuType->menutype, 'class:menu', null, null, $titleicon), $createMenu
+			new Node($menuType->title, 'index.php?option=com_menus&controller=items&menutype=' . $menuType->menutype, 'class:menu', null, null, $titleicon), $createMenu
 		);
 
 		if ($createMenu)
 		{
 			$menu->addChild(
-				new Node(Lang::txt('MOD_MENU_MENU_MANAGER_NEW_MENU_ITEM'), 'index.php?option=com_menus&view=item&layout=edit&menutype=' . $menuType->menutype, 'class:newarticle')
+				new Node(Lang::txt('MOD_MENU_MENU_MANAGER_NEW_MENU_ITEM'), 'index.php?option=com_menus&controller=item&layout=edit&menutype=' . $menuType->menutype, 'class:newarticle')
 			);
 			$menu->getParent();
 		}
@@ -295,7 +295,7 @@ if (User::authorise('core.manage', 'com_content'))
 		$menu->getParent();
 	}
 	/*$menu->addChild(
-		new Node(Lang::txt('MOD_MENU_COM_CONTENT_FEATURED'), 'index.php?option=com_content&view=featured', 'class:featured')
+		new Node(Lang::txt('MOD_MENU_COM_CONTENT_FEATURED'), 'index.php?option=com_content&controller=featured', 'class:featured')
 	);
 	*/
 	if (User::authorise('core.manage', 'com_media'))

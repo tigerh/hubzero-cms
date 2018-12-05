@@ -1,0 +1,93 @@
+com_modules                                     com_menus_old
+├── admin                                       ├── admin
+│   ├── controllers                          >> │   ├── controller.php
+│   │   ├── index.html                    <<    │   ├── controllers
+│   │   └── modules.php                      >> │   │   ├── index.html
+│   ├── help                              ++    │   │   ├── item.php
+│   │   ├── en-GB                         ++    │   │   ├── items.php
+│   │   │   ├── index.html                <<    │   │   ├── menu.php
+│   │   │   ├── module.phtml              <<    │   │   └── menus.php
+│   │   │   └── modules.phtml             << ++ │   ├── help
+│   │   └── index.html                    << ++ │   │   ├── en-GB
+│   ├── index.html                        << >> │   │   │   ├── index.html
+│   ├── language                          ++ >> │   │   │   ├── item.phtml
+│   │   └── en-GB                         ++ >> │   │   │   ├── items.phtml
+│   │       ├── en-GB.com_modules.ini     << >> │   │   │   ├── menu.phtml
+│   │       └── en-GB.com_modules.sys.ini << >> │   │   │   └── menus.phtml
+│   ├── modules.php                       << >> │   │   └── index.html
+│   └── views                                   │   ├── helpers
+│       ├── index.html                    <<    │   │   ├── html
+│       └── modules                          >> │   │   │   ├── index.html
+│           ├── index.html                <<    │   │   │   └── menus.php
+│           └── tmpl                         >> │   │   ├── index.html
+│               ├── display_batch.php           │   │   └── menus.php
+│               ├── display.php              >> │   ├── index.html
+│               ├── edit_assignment.php      ++ │   ├── language
+│               ├── edit_options.php         ++ │   │   └── en-GB
+│               ├── edit.php                 >> │   │       ├── en-GB.com_menus.ini
+│               ├── index.html            << >> │   │       └── en-GB.com_menus.sys.ini
+│               ├── modal.php                >> │   ├── menus.php
+│               ├── positions.php               │   ├── models
+│               ├── preview.php              ++ │   │   ├── fields
+│               └── select.php               >> │   │   │   ├── index.html
+├── config                                ++ >> │   │   │   ├── menuordering.php
+│   ├── access.xml                        << >> │   │   │   ├── menuparent.php
+│   └── config.xml                        << >> │   │   │   └── menutype.php
+├── helpers                                  ++ │   │   ├── forms
+│   ├── index.html                        << >> │   │   │   ├── index.html
+│   └── modules.php                          >> │   │   │   ├── item_alias.xml
+├── models                                   >> │   │   │   ├── item_component.xml
+│   ├── fields                            ++ >> │   │   │   ├── item_separator.xml
+│   │   ├── index.html                    << >> │   │   │   ├── item_url.xml
+│   │   ├── moduleorder.php               << >> │   │   │   ├── item.xml
+│   │   └── moduleposition.php            << >> │   │   │   └── menu.xml
+│   ├── forms                             ++ >> │   │   ├── index.html
+│   │   ├── index.html                    <<    │   │   ├── item.php
+│   │   └── module.xml                    <<    │   │   ├── items.php
+│   ├── menu.php                                │   │   ├── menu.php
+│   └── module.php                              │   │   ├── menus.php
+└── modules.xml                           <<    │   │   └── menutypes.php
+                                                │   ├── tables
+14 directories, 34 files                        │   │   ├── index.html
+                                                │   │   └── menu.php
+                                                │   └── views
+                                             >> │       ├── index.html
+                                                │       ├── item
+                                             >> │       │   ├── index.html
+                                                │       │   ├── tmpl
+                                                │       │   │   ├── edit_modules.php
+                                                │       │   │   ├── edit_options.php
+                                                │       │   │   ├── edit.php
+                                             >> │       │   │   └── index.html
+                                             >> │       │   └── view.html.php
+                                                │       ├── items
+                                             >> │       │   ├── index.html
+                                                │       │   ├── tmpl
+                                                │       │   │   ├── default_batch.php
+                                                │       │   │   ├── default.php
+                                             >> │       │   │   └── index.html
+                                             >> │       │   └── view.html.php
+                                                │       ├── menu
+                                             >> │       │   ├── index.html
+                                                │       │   ├── tmpl
+                                                │       │   │   ├── edit.php
+                                             >> │       │   │   └── index.html
+                                             >> │       │   └── view.html.php
+                                                │       ├── menus
+                                             >> │       │   ├── index.html
+                                                │       │   ├── tmpl
+                                                │       │   │   ├── default.php
+                                             >> │       │   │   └── index.html
+                                             >> │       │   └── view.html.php
+                                                │       └── menutypes
+                                             >> │           ├── index.html
+                                                │           ├── tmpl
+                                                │           │   ├── default.php
+                                             >> │           │   └── index.html
+                                             >> │           └── view.html.php
+                                             ++ ├── config
+                                             >> │   ├── access.xml
+                                             >> │   └── config.xml
+                                             >> └── menus.xml
+                                                
+                                                24 directories, 66 files

@@ -79,6 +79,7 @@ $script .= "	Joomla.submitform(task, document.getElementById('item-form'));
 	}";
 
 Document::addScriptDeclaration($script);
+ddie($this->form);
 ?>
 <form action="<?php echo Route::url('index.php?option=' . $this->option . '&task=edit&id='.(int) $this->item->id); ?>" method="post" name="adminForm" id="item-form" class="form-validate">
 	<div class="grid">
